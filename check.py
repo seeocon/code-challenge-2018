@@ -26,7 +26,7 @@ PRODUCT_DATA = json.loads(response_product_list.text)
 total_price = 0.00
 
 for x in MOCK_SNACKER_DATA:
-    for y in PRODUCT_DATA['products']:
+    for y in PRODUCT_DATA['products']: # standard O(n^2) approach.
         if (x['fave_snack'] == y['title']):
             print (x['fave_snack']) # a) fave snacks
             print (x['email']) # b) emails of fave snack
